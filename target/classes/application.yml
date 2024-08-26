@@ -1,0 +1,23 @@
+
+spring:
+  application:
+    name: GestionBibliotheque
+  main:
+    allow-circular-references: true
+  mvc:
+    path-match:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestionbibliotheque?createDatabaseIfNotExist=true&UserSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTime=UTC
+    password: Admin_123
+    username: phpmyadmin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true
+
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: 8081
